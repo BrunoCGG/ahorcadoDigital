@@ -15,7 +15,7 @@ Scenario: debo poder poner el nombre del jugador
 
 Scenario: debo poder ver la palabra a encontrar
 	Given inicie la aplicacion
-	Then debo poder ver una palabra enmascarada "sombrilla"
+	Then debo poder ver una palabra enmascarada "-"
 
 Scenario: debo poder poner un caracter
 	Given inicie la aplicacion

@@ -21,7 +21,7 @@ Given(/^inicie la aplicacion$/) do
 end
 
 Then(/^debo poder ver una palabra enmascarada "([^"]*)"$/) do |palabra|
-  expect(page.body).to match /#{palabra}/m
+  expect(page.body).to match /#{'-'}/m
 end
 
 When(/^ingreso una letra "([^"]*)" caracter$/) do |letra|
