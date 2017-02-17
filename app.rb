@@ -15,5 +15,4 @@ end
 
 post '/buscar' do
 	session["letra"] = "#{params['caracter']}"
-	"a"
 end

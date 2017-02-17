@@ -13,10 +13,16 @@
 		<tr>
 			<td>Ingrese la letra</td>
 			<td>
-				<form action="/validar" method="POST"> 
+				<form action="/buscar" method="POST"> 
 					<input type="text" name="caracter">
 					<input type="submit" name="buscar" value="buscar">
 				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>Palabra Ingresada</td>
+			<td>
+				<%=session["letra"] %>
 			</td>
 		</tr>
 	</table>
