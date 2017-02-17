@@ -14,7 +14,7 @@
 			<td>Ingrese la letra</td>
 			<td>
 				<form action="/buscar" method="POST"> 
-					<input type="text" name="caracter">
+					<input type="text" name="caracter" maxlength="1">
 					<input type="submit" name="buscar" value="buscar">
 				</form>
 			</td>
@@ -23,6 +23,11 @@
 			<td>Palabra Ingresada</td>
 			<td>
 				<%=session["carac"] %>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<%= session["juego"].validaPalabra %>
 			</td>
 		</tr>
 	</table>

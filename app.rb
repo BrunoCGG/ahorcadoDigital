@@ -17,5 +17,7 @@ end
 
 post '/buscar' do
 	session["carac"] = "#{params['caracter']}"
+	session["juego"].validaLetra session["carac"]
+	
 	erb :juego
 end

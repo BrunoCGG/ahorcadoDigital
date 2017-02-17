@@ -24,7 +24,7 @@ class AhorcadoDigital
     	   return "GANASTE"
     	else
      	   if @fallas == @LIMITE_FALLAS
-     	   	 return "HAS SIDO AHORCADO"
+     	   	 return "HAS SIDO AHORCADO, la palabra correcta es " + @palabra
      	   else
      	   	 return "Sigue Intentando. Llevas " + @fallas.to_s + " intentos de " + @LIMITE_FALLAS.to_s
      	   end
@@ -32,17 +32,19 @@ class AhorcadoDigital
     end
 
     def validaLetra letra
-    	localizado = 0
-		for i in 0..@palabra.length-1
-			if(@palabra[i] == letra)
-				@palabraOculta[i] = letra
-				localizado = localizado + 1
+    	if @fallas < @LIMITE_FALLAS then
+	    	localizado = 0
+			for i in 0..@palabra.length-1
+				if(@palabra[i] == letra)
+					@palabraOculta[i] = letra
+					localizado = localizado + 1
+				end
 			end
+			if localizado == 0
+		    	@fallas = @fallas + 1
+		    end
+		    return localizado
 		end
-		if localizado = 0
-	    	@fallas = @fallas + 1
-	    end
-	    return localizado
 	end
 
 	private
