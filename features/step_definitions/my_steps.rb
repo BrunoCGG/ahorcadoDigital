@@ -23,3 +23,11 @@ end
 Then(/^debo poder ver una palabra enmascarada "([^"]*)"$/) do |palabra|
   expect(page.body).to match /#{palabra}/m
 end
+
+When(/^ingreso una letra "([^"]*)" caracter$/) do |letra|
+  fill_in("caracter", :with => letra)
+end
+
+When(/^verifico el caracter$/) do
+  click_button("buscar")
+end

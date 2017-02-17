@@ -11,3 +11,7 @@ post '/iniciar' do
 	session["juego"] = AhorcadoDigital.new
 	erb :juego
 end
+
+post '/buscar' do
+	"a"
+end
