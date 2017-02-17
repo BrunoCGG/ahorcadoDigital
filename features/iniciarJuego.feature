@@ -13,3 +13,6 @@ Scenario: debo poder poner el nombre del jugador
 	And inicio un partido
 	Then debo poder ver "Bienvenido Aaron"
 
+Scenario: debo poder ver la palabra a encontrar
+	Given inicie la aplicacion
+	Then debo poder ver una palabra enmascarada "1111"

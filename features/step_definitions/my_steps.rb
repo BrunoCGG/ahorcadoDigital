@@ -16,10 +16,10 @@ end
 
 Given(/^inicie la aplicacion$/) do
   visit '/'
-  fill_in("jugador", :with => jugador)
+  fill_in("jugador", :with => "Aaron")
   click_button("iniciar")
 end
 
-Then(/^debo poder ver una palabra enmascarada$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^debo poder ver una palabra enmascarada "([^"]*)"$/) do |palabra|
+  expect(page.body).to match /#{palabra}/m
 end
