@@ -13,4 +13,11 @@ describe AhorcadoDigital do
         expect(ahorcadoDigital.obtenerPalabra.size).to eq ahorcadoDigital.mostrarPalabra.size
     end
 
+    it "Buscar una letra" do
+    	ahorcadoDigital = AhorcadoDigital.new
+    	puts ahorcadoDigital.obtenerPalabra
+    	ahorcadoDigital.validaLetra "a"
+    	puts ahorcadoDigital.mostrarPalabra
+        expect(ahorcadoDigital.obtenerPalabra.size).to eq ahorcadoDigital.mostrarPalabra.size
+    end
 end

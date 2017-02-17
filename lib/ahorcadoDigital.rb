@@ -18,14 +18,17 @@ class AhorcadoDigital
         return @palabraOculta
     end
 
-private
-
-	def inicializarPalabraOculta
-		@palabraOculta = '-' * @palabra.length
+    def validaLetra letra
+		for i in 0..@palabra.length-1
+			if(@palabra[i] == letra)
+				@palabraOculta[i] = letra
+			end
+		end
 	end
 
-	def encriptaPalabra
-
+	private
+	def inicializarPalabraOculta
+		@palabraOculta = '-'*@palabra.length
 	end
 
 end
