@@ -10,9 +10,12 @@ post '/iniciar' do
 	session["J1"]="#{params['jugador']}"
 	session["juego"] = AhorcadoDigital.new
 	session["juego"].obtenerPalabra
+	session["carac"] = ""
 	erb :juego
+	#session["carac"] = ""
 end
 
 post '/buscar' do
-	session["letra"] = "#{params['caracter']}"
+	session["carac"] = "#{params['caracter']}"
+	erb :juego
 end
