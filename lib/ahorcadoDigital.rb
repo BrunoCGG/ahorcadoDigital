@@ -19,20 +19,16 @@ class AhorcadoDigital
         return @palabraOculta
     end
 
-    def numFallas
-    	return @fallas
-    end
-
     def validaPalabra
-    	if (expect(@palabra).to eq @palabraOculta)
+    	if @palabra == @palabraOculta
     	   return "GANASTE"
     	else
-    	   if @numFallas < @LIMITE_FALLAS
-     	   	 return "SIGUE INTENTANDO"
-     	   else
+     	   if @fallas == @LIMITE_FALLAS
      	   	 return "HAS SIDO AHORCADO"
+     	   else
+     	   	 return "Sigue Intentando. Llevas " + @fallas.to_s + " intentos de " + @LIMITE_FALLAS.to_s
      	   end
-    	end
+	   	end
     end
 
     def validaLetra letra
